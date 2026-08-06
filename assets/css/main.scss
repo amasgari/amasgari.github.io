@@ -37,3 +37,10 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
+
+/* Custom size for the profile photo in the sidebar */
+.author__avatar img {
+  max-width: 500px; /* Adjust size as needed (default is usually ~200px) */
+  height: auto;
+  border-radius: 50%; /* Set to 0% for square, 50% for circle */
+}
