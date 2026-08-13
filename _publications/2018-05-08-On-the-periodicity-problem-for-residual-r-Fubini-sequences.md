@@ -1,5 +1,5 @@
 ---
-title: "On the periodicity problem for residual $r$-Fubini sequences"
+title: "On the periodicity problem for residual $$r$$-Fubini sequences"
 category: manuscripts
 collection: publications
 permalink: /publication/2018-05-08-On-the-periodicity-problem-for-residual-r-Fubini-sequences
