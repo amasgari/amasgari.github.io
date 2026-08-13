@@ -3,3 +3,22 @@
 {% include analytics.html %}
 
 {% include comments-providers/scripts.html %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var links = document.querySelectorAll('a');
+    links.forEach(function(link) {
+      // If you want EVERY link (internal + external) to open in a new tab:
+	/*
+	link.setAttribute('target', '_blank');
+	link.setAttribute('rel', 'noopener noreferrer');
+	*/
+      // if you only want EXTERNAL links to open in a new tab:
+      
+      if (link.hostname !== window.location.hostname && link.href.startsWith('http')) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      }
+    });
+  });
+</script>
