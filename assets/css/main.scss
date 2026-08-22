@@ -44,3 +44,9 @@
   height: auto;
   border-radius: 50%; /* Set to 0% for square, 50% for circle */
 }
+
+/* Enable clicks on active navigation items */
+.masthead__menu-item.selected a {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
