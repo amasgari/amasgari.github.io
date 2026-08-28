@@ -1,11 +1,11 @@
 ---
 title: "Computer Generation of Explicit Formulas for Hyperelliptic Curve Divisor Arithmetic"
-category: manuscripts
+category: conferences
 collection: publications
 permalink: /publication/2026-08-09-Computer-Generation-of-Explicit-Formulas
 excerpt:
 date: 2026-08-09
-venue: 'Journal of Integer Sequences'
+venue: 'Lecture Notes in Computer Science'
 paperurl: 'https://doi.org/10.1007/978-3-032-34586-8_2'
 bibtexurl: '../files/2026-08-09-Computer-Generation-of-Explicit-Formulas.bib'
 citation: 'Asgari, A.A., He, H., Jacobson, M.J., Scheidler, R. (2027). Computer Generation of Explicit Formulas for Hyperelliptic Curve Divisor Arithmetic. In: Boulier, F., Mou, C., Sadykov, T.M., Uncu, A.K. (eds) Computer Algebra in Scientific Computing. CASC 2026. <i>Lecture Notes in Computer Science</i>, vol 16844. Springer, Cham.'
