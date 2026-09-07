@@ -1,25 +1,23 @@
 {
-  "name": "academic-pages",
-  "version": "0.8.1.1",
-  "description": "Academic Pages Mistakes Jekyll theme npm build scripts",
+  "name": "amasgari-github-io",
+  "version": "1.0.0",
+  "description": "Personal academic homepage for Amir Abbas Asgari",
   "repository": {
     "type": "git",
-    "url": "https://github.com/academicpages/academicpages.github.io"
+    "url": "https://github.com/amasgari/amasgari.github.io"
   },
   "keywords": [
+    "academic",
+    "homepage",
     "jekyll",
-    "theme",
-    "minimal"
+    "personal-site"
   ],
-  "contributors": [
-    "Michael Rose",
-    "Robert Zupko"
-  ],
+  "contributors": [],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/academicpages/academicpages.github.io/issues"
+    "url": "https://github.com/amasgari/amasgari.github.io/issues"
   },
-  "homepage": "https://github.com/academicpages/academicpages.github.io",
+  "homepage": "https://amasgari.github.io",
   "engines": {
     "node": ">= 0.10.0"
   },
