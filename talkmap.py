@@ -5,6 +5,8 @@
 # with geopy/Nominatim, and uses the getorg library to output data, HTML, and
 # Javascript for a standalone cluster map. This is functionally the same as the
 # #talkmap Jupyter notebook.
+import re
+
 import frontmatter
 import glob
 import getorg
@@ -39,17 +41,24 @@ for file in g:
     venue = data['venue'].strip()
     location = data['location'].strip()
     description = f"{title}<br />{venue}; {location}"
+    geocode_location = re.sub(r"\s*\([^)]*\)\s*", " ", location).strip()
+    if not geocode_location:
+        continue
 
     # Geocode the location and report the status
     try:
-        location_dict[description] = geocoder.geocode(location, timeout=TIMEOUT)
-        print(description, location_dict[description])
+        result = geocoder.geocode(geocode_location, timeout=TIMEOUT)
+        if result is None:
+            print(f"Error: geocode returned no result for input {geocode_location}")
+            continue
+        location_dict[description] = result
+        print(description, result)
     except ValueError as ex:
-        print(f"Error: geocode failed on input {location} with message {ex}")
+        print(f"Error: geocode failed on input {geocode_location} with message {ex}")
     except GeocoderTimedOut as ex:
-        print(f"Error: geocode timed out on input {location} with message {ex}")
+        print(f"Error: geocode timed out on input {geocode_location} with message {ex}")
     except Exception as ex:
-        print(f"An unhandled exception occurred while processing input {location} with message {ex}")
+        print(f"An unhandled exception occurred while processing input {geocode_location} with message {ex}")
 
 # Save the map
 m = getorg.orgmap.create_map_obj()
