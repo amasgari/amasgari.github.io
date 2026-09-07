@@ -24,6 +24,17 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Regenerate talk map data
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install frontmatter getorg geopy
+          python talkmap.py
+
       - name: Build site with Jekyll
         run: bundle exec jekyll build
         env:
