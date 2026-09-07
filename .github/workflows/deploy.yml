@@ -32,7 +32,7 @@ jobs:
       - name: Regenerate talk map data
         run: |
           python -m pip install --upgrade pip
-          python -m pip install frontmatter getorg geopy
+          python -m pip install python-frontmatter getorg geopy
           python talkmap.py
 
       - name: Build site with Jekyll
